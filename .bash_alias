@@ -1,0 +1,26 @@
+# User specific aliases and functions
+alias ll='ls -FlAG'
+alias la='ls -a'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias h='history'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias nuke-it-from-orbit='rm -rf  $(ls -a | grep -v "^\.*$") && git init'
+alias fuDsStore='find . -name "*.DS_Store" -type f -delete'
+alias gitDatOuttaHere='git checkout -- .'
+alias uuidcopy='uuidgen | perl -pe chomp | pbcopy'
+alias formatjson='pbpaste | python -m json.tool | pbcopy'
+
+alias fum2='rm -rf ~/.m2/repository'
+
+alias grademon='gradle --daemon'
+# alias gw='./gradlew --daemon'
+alias gw='./gradlew'
+alias gwq='./gradlew -q'
+
+# Git aliases
+alias gs='git status'
+alias gd='git diff'
+alias gg='git grep'

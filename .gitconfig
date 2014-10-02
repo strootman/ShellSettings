@@ -1,0 +1,37 @@
+[user]
+	name = Jonathan Strootman
+	email = jstroot@iplantcollaborative.org
+[alias]
+	showignored = ls-files -i -o --exclude-standard
+	co = checkout
+        cob = checkout -b
+        cm = !git add -A && git commit -m
+        save = !git add -A && git commit -m 'SAVEPOINT' --no-verify
+        wip = !git add -u && git commit -m "WIP" --no-verify
+        amend = commit -a --amend
+        undo = reset HEAD~1 --mixed
+	stat = status
+        wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+        tree = log --graph --decorate --pretty=oneline --abbrev-commit
+[credential]
+	helper = osxkeychain
+[color]
+	ui = true
+	branch = auto
+	diff = auto
+	status = auto
+[core]
+	excludesfile = /Users/jstroot/.gitignore_global
+[push]
+	default = upstream
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = diffmerge.sh $LOCAL $REMOTE
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = diffmerge.sh --merge\n--result=$MERGED $LOCAL $BASE $REMOTE
