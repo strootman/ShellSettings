@@ -1,5 +1,5 @@
 # User specific aliases and functions
-alias ll='ls -FlAG'
+alias ll="ls -l --block-size=\'1 --color=auto"
 alias la='ls -a'
 alias rm='rm -i'
 alias cp='cp -i'
@@ -26,5 +26,5 @@ alias gd='git diff'
 alias gg='git grep'
 
 # Working Notes
-alias dnotes='date +%d-%b-%Y_%a'
+alias today='date +%d-%b-%Y_%a'
 alias mkNote='echo "$(date +%R) -"'
