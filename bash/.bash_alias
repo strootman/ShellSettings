@@ -1,20 +1,20 @@
 # User specific aliases and functions
 alias ll="ls -l --block-size=\'1 --color=auto"
-alias la='ls -a'
+alias la='ls -A'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias h='history'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias push='pushd'
+alias pop='popd'
+alias pbcopy='xsel --clipboad --input'
+alias pbpaste='xsel --clipboard --output'
 alias nuke-it-from-orbit='rm -rf  $(ls -a | grep -v "^\.*$") && git init'
-alias fuDsStore='find . -name "*.DS_Store" -type f -delete'
-alias gitDatOuttaHere='git checkout -- .'
-alias uuidcopy='uuidgen | perl -pe chomp | pbcopy'
 alias formatjson='pbpaste | python -m json.tool | pbcopy'
 
-alias fum2='rm -rf ~/.m2/repository'
-
+# Gradle aliases
 alias grademon='gradle --daemon'
 # alias gw='./gradlew --daemon'
 alias gw='./gradlew'
