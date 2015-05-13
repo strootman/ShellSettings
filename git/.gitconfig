@@ -2,17 +2,20 @@
 	name = Jonathan Strootman
 	email = jstroot@iplantcollaborative.org
 [alias]
-	showignored = ls-files -i -o --exclude-standard
-	co = checkout
+        showignored = ls-files -i -o --exclude-standard
+        co = checkout
         cob = checkout -b
         cm = !git add -A && git commit -m
         save = !git add -A && git commit -m 'SAVEPOINT' --no-verify
         wip = !git add -u && git commit -m "WIP" --no-verify
         amend = commit -a --amend
         undo = reset HEAD~1 --mixed
-	stat = status
+        stat = status
         wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
         tree = log --graph --decorate --pretty=oneline --abbrev-commit
+    	spp = !git stash save && git pull && git stash pop
+        ss = stash save
+        sp = stash pop
 [credential]
 	helper = osxkeychain
 [color]
