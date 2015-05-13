@@ -11,8 +11,10 @@ alias push='pushd'
 alias pop='popd'
 alias pbcopy='xsel --clipboad --input'
 alias pbpaste='xsel --clipboard --output'
+alias memused="free | grep Mem | awk '{print \$3/\$2 * 100.0}'"
 alias nuke-it-from-orbit='rm -rf  $(ls -a | grep -v "^\.*$") && git init'
 alias formatjson='pbpaste | python -m json.tool | pbcopy'
+alias cleanHistory="h | awk '{\$1=\"\"; print}'"
 
 # Gradle aliases
 alias grademon='gradle --daemon'
