@@ -9,4 +9,5 @@ git subtree add --prefix=vim/.vim/bundle/Dockerfile --squash Dockerfile master
 git subtree add --prefix=vim/.vim/bundle/paraedit.vim --squash paredit.vim master
 git subtree add --prefix=vim/.vim/bundle/powerline --squash powerline master
 git subtree add --prefix=vim/.vim/bundle/rainbow_parentheses.vim --squash rainbow_parentheses.vim master
+git subtree add --prefix=vim/.vim/bundle/nertree.vim --squash NERDTree master
 
