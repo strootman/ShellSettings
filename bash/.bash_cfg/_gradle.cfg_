@@ -1,0 +1,6 @@
+# Gradle aliases
+alias grademon='gradle --daemon'
+# alias gw='./gradlew --daemon'
+alias gw='./gradlew'
+alias gwq='./gradlew -q'
+
